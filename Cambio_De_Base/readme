@@ -19,10 +19,6 @@ Este proyecto tiene como objetivo desarrollar un programa en **C** con interfaz 
 
 conversiones/ │ ├── main.c # Archivo principal con el menú y la interfaz gráfica ├── bin_to_hex.c # Conversión de Binario a Hexadecimal ├── bin_to_dec.c # Conversión de Binario a Decimal ├── hex_to_bin.c # Conversión de Hexadecimal a Binario ├── hex_to_dec.c # Conversión de Hexadecimal a Decimal ├── corrimientos.c # Operaciones de corrimientos en binarios ├── README.md # Este archivo └── resources/ # Archivos de diseño gráfico o librerías necesarias
 
-yaml
-Copy
-Edit
-
 ---
 
 ## Asignación de Tareas
@@ -47,23 +43,14 @@ Hexadecimal a Binario
 Hexadecimal a Decimal
 Corrimiento a la izquierda
 Corrimiento a la derecha
-shell
-Copy
-Edit
 
 ### Entrada:
 Ingrese el número binario: 1010 Seleccione corrimiento: izquierda Ingrese la cantidad de posiciones: 2
 
-shell
-Copy
-Edit
 
 ### Salida:
 El resultado del corrimiento es: 101000
 
-yaml
-Copy
-Edit
 
 ---
 
