@@ -1,0 +1,57 @@
+# Proyecto de Conversión de Números con Interfaz Gráfica
+
+```css
+/* Descripción del Proyecto */
+Este proyecto tiene como objetivo desarrollar un programa en C con interfaz gráfica para realizar conversiones entre diferentes sistemas numéricos (binario, decimal, hexadecimal). Más adelante, se considerará implementarlo en otros lenguajes como JavaScript o Python.
+
+/* Funcionalidades */
+- El programa permitirá realizar las siguientes conversiones:
+  1. Binario a Hexadecimal
+  2. Binario a Decimal
+  3. Hexadecimal a Binario
+  4. Hexadecimal a Decimal
+- También incluirá opciones para realizar corrimientos a la izquierda y derecha en los números binarios.
+
+/* Estructura del Proyecto */
+conversiones/
+│
+├── main.c              /* Archivo principal con el menú y la interfaz gráfica */
+├── bin_to_hex.c        /* Conversión de Binario a Hexadecimal */
+├── bin_to_dec.c        /* Conversión de Binario a Decimal */
+├── hex_to_bin.c        /* Conversión de Hexadecimal a Binario */
+├── hex_to_dec.c        /* Conversión de Hexadecimal a Decimal */
+├── corrimientos.c      /* Operaciones de corrimientos en binarios */
+├── README.md           /* Este archivo */
+└── resources/          /* Archivos de diseño gráfico o librerías necesarias */
+
+
+/* Asignación de Tareas */
+| Nombre      | Tarea                   | Archivo         |
+|-------------|-------------------------|-----------------|
+| Julián      | Binario a Hexadecimal   | bin_to_hex.c    |
+| Daniel      | Binario a Decimal       | bin_to_dec.c    |
+| Andrés      | Hexadecimal a Binario   | hex_to_bin.c    |
+| Equipo      | Corrimientos Binarios   | corrimientos.c  |
+
+/* Ejemplo de Uso */
+Menú en la interfaz gráfica:
+Seleccione una opción:
+1. Binario a Hexadecimal
+2. Binario a Decimal
+3. Hexadecimal a Binario
+4. Hexadecimal a Decimal
+5. Corrimiento a la izquierda
+6. Corrimiento a la derecha
+
+Entrada:
+Ingrese el número binario: 1010
+Seleccione corrimiento: izquierda
+Ingrese la cantidad de posiciones: 2
+
+Salida:
+El resultado del corrimiento es: 101000
+
+/* Colaboradores */
+- Julián Rosas
+- Daniel Araque
+- Andrés GR7
