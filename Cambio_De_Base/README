@@ -9,8 +9,9 @@ Este proyecto tiene como objetivo desarrollar un programa en **C** con interfaz 
 - El programa permitirá realizar las siguientes conversiones:
   1. **Binario a Hexadecimal**
   2. **Binario a Decimal**
-  3. **Hexadecimal a Binario**
-  4. **Hexadecimal a Decimal**
+  4. **Decimal a Hexadecimal**
+  5. **Hexadecimal a Binario**
+  6. **Hexadecimal a Decimal**
 - También incluirá opciones para realizar **corrimientos** a la izquierda y derecha en los números binarios.
 
 ---
@@ -39,6 +40,7 @@ Seleccione una opción:
 
 Binario a Hexadecimal
 Binario a Decimal
+Decimal a Hexadecimal
 Hexadecimal a Binario
 Hexadecimal a Decimal
 Corrimiento a la izquierda
