@@ -6,18 +6,30 @@
 
 
 #include <iostream>
-#include <cmath>
+
 using namespace std;
 
-int main() {
-    int bin, dec = 0, potencia = 0;
+//global variables 
+int bin=0;
+int num=0;
+
+int asknumber(){
     cout << "Introduce un número binario: ";
-    cin >> bin;
-    while (bin > 0) {
-        dec += (bin % 10) * pow(2, potencia);
-        bin /= 10;
-        potencia++;
-    }
-    cout << "El número decimal es: " << dec << endl;
+    cin >> num;
+    return num;
+
+}
+
+int main() {
+
+//stores in global var
+   bin=asknumber(); 
+
+//converts the number to decimal
+
+
+
+
+
     return 0;
 }
