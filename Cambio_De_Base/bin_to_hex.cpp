@@ -22,14 +22,14 @@ string decimal_a_hexadecimal(int decimal) {
     string hex_chars = "0123456789ABCDEF";
     while (decimal > 0) {
         int residuo = decimal % 16;
-        hexadecimal = hex_chars[residuo] + hexadecimal;
+        hexadecimal = hex_chars[residuo] + hexadecimal; // Para agregar cifra más significativa al principio
         decimal /= 16;
     }
     return hexadecimal.empty() ? "0" : hexadecimal;
 }
 
 // Función principal para convertir binario a hexadecimal
-string binario_a_hexadecimal(const string &binario) {
+string binario_a_hexadecimal(const string &binario) { // Paso parámetro por referencia (&) -> Evita copiar el parámetro, minimiza el uso de memoria. (Si no se usa referencia, se copia el parámetro y se almacena en otro espacio de memoria, si se usa referencia, se almacena en el mismo espacio de memoria)
     int decimal = binario_a_decimal(binario);
     return decimal_a_hexadecimal(decimal);
 }
