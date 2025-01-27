@@ -5,6 +5,6 @@
 *.o
 *.out
 
-# Ignorar carpetas temporales (por si las usas)
+# Ignorar carpetas temporales
 /build/
 /temp/
