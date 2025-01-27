@@ -1,0 +1,10 @@
+# Ignorar ejecutables generados
+*.exe
+
+# Ignorar archivos de compilación temporales
+*.o
+*.out
+
+# Ignorar carpetas temporales (por si las usas)
+/build/
+/temp/
