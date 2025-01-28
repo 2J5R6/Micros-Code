@@ -1,23 +1,12 @@
-//this is the code for converting a bin number to decinal number 
-
-//All licenses are intended to be open source.
-
-//Developer: Daniel García Araque
-
-
 #include <iostream>
 #include <cmath>
 using namespace std;
 
-int main() {
-    int bin, dec = 0, potencia = 0;
-    cout << "Introduce un número binario: ";
-    cin >> bin;
-    while (bin > 0) {
-        dec += (bin % 10) * pow(2, potencia);
-        bin /= 10;
+int binario_a_decimal(const string &binario) {
+    int decimal = 0, potencia = 0;
+    for (int i = binario.length() - 1; i >= 0; i--) {
+        decimal += (binario[i] - '0') * pow(2, potencia);
         potencia++;
     }
-    cout << "El número decimal es: " << dec << endl;
-    return 0;
+    return decimal;
 }

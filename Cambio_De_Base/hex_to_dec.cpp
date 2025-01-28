@@ -42,23 +42,23 @@ int hexadecimal_a_decimal(const string &hexadecimal) {
     return decimal; // Devuelvo el valor decimal resultante
 }
 
-int main() {
-    // Solicito al usuario un número hexadecimal
-    string numero_hexadecimal;
-    cout << "Ingrese un número hexadecimal: ";
-    cin >> numero_hexadecimal;
+// int main() {
+//     // Solicito al usuario un número hexadecimal
+//     string numero_hexadecimal;
+//     cout << "Ingrese un número hexadecimal: ";
+//     cin >> numero_hexadecimal;
 
-    // Llamo a la función para realizar la conversión
-    int resultado = hexadecimal_a_decimal(numero_hexadecimal);
+//     // Llamo a la función para realizar la conversión
+//     int resultado = hexadecimal_a_decimal(numero_hexadecimal);
 
-    // Si hubo un error, termino el programa
-    if (resultado == -1) {
-        cout << "Error en la conversión. Por favor, intente de nuevo." << endl;
-        return 1;
-    }
+//     // Si hubo un error, termino el programa
+//     if (resultado == -1) {
+//         cout << "Error en la conversión. Por favor, intente de nuevo." << endl;
+//         return 1;
+//     }
 
-    // Muestro el resultado de la conversión
-    cout << "El equivalente en decimal es: " << resultado << endl;
+//     // Muestro el resultado de la conversión
+//     cout << "El equivalente en decimal es: " << resultado << endl;
 
-    return 0; // Termino el programa exitosamente
-}
+//     return 0; // Termino el programa exitosamente
+// }

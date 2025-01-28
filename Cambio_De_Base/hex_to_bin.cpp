@@ -45,19 +45,19 @@ private:
     }
 };
 
-int main() {
-    string numeroHex;
-    cout << "Ingrese un número hexadecimal: ";
-    cin >> numeroHex;
+// int main() {
+//     string numeroHex;
+//     cout << "Ingrese un número hexadecimal: ";
+//     cin >> numeroHex;
 
-    Hex_to_Bin conversor;
+//     Hex_to_Bin conversor;
 
-    string numeroBinario = conversor.convertirHexABinario(numeroHex);
-    if (numeroBinario.empty()) {
-        cout << "El número hexadecimal ingresado es inválido." << endl;
-    } else {
-        cout << "El número en binario es: " << numeroBinario << endl;
-    }
+//     string numeroBinario = conversor.convertirHexABinario(numeroHex);
+//     if (numeroBinario.empty()) {
+//         cout << "El número hexadecimal ingresado es inválido." << endl;
+//     } else {
+//         cout << "El número en binario es: " << numeroBinario << endl;
+//     }
 
-    return 0;
-}
+//     return 0;
+// }

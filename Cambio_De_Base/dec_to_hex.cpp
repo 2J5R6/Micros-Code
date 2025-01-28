@@ -26,23 +26,23 @@ string decimal_a_hexadecimal(int decimal) {
     return hexadecimal; // Devuelvo la cadena hexadecimal construida
 }
 
-int main() {
-    // Solicito al usuario un número decimal
-    int numero_decimal;
-    cout << "Ingrese un número en base decimal: ";
-    cin >> numero_decimal;
+// int main() {
+//     // Solicito al usuario un número decimal
+//     int numero_decimal;
+//     cout << "Ingrese un número en base decimal: ";
+//     cin >> numero_decimal;
 
-    // Verifico que el número ingresado sea no negativo
-    if (numero_decimal < 0) {
-        cout << "Por favor, ingrese un número no negativo." << endl;
-        return 1; // Termino el programa con un código de error
-    }
+//     // Verifico que el número ingresado sea no negativo
+//     if (numero_decimal < 0) {
+//         cout << "Por favor, ingrese un número no negativo." << endl;
+//         return 1; // Termino el programa con un código de error
+//     }
 
-    // Llamo a la función para convertir el número a hexadecimal
-    string resultado = decimal_a_hexadecimal(numero_decimal);
+//     // Llamo a la función para convertir el número a hexadecimal
+//     string resultado = decimal_a_hexadecimal(numero_decimal);
 
-    // Muestro el resultado de la conversión
-    cout << "El equivalente en hexadecimal es: " << resultado << endl;
+//     // Muestro el resultado de la conversión
+//     cout << "El equivalente en hexadecimal es: " << resultado << endl;
 
-    return 0; // Termino el programa exitosamente
-}
+//     return 0; // Termino el programa exitosamente
+// }

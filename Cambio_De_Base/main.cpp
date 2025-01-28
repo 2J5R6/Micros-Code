@@ -1,98 +1,84 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+#include "conversiones.h"
 
-// Declaraciones de funciones externas
-extern char* decimal_a_hexadecimal(int decimal);
-extern int hexadecimal_a_decimal(const char* hexadecimal);
-extern int binario_a_decimal(const char* binario);
-extern char* binario_a_hexadecimal(const char* binario);
-extern void corrimiento_izquierda(char* binario, int posiciones);
-extern void corrimiento_derecha(char* binario, int posiciones);
+using namespace std;
 
 // Función para mostrar el menú principal
 void mostrar_menu() {
-    printf("\n=== Conversión y Operaciones Numéricas ===\n");
-    printf("1. Binario a Decimal\n");
-    printf("2. Binario a Hexadecimal\n");
-    printf("3. Decimal a Hexadecimal\n");
-    printf("4. Hexadecimal a Decimal\n");
-    printf("5. Corrimiento a la izquierda\n");
-    printf("6. Corrimiento a la derecha\n");
-    printf("7. Salir\n");
-    printf("Seleccione una opción: ");
+    cout << "\n=== Menú de Conversión ===" << endl;
+    cout << "1. Binario a Decimal" << endl;
+    cout << "2. Binario a Hexadecimal" << endl;
+    cout << "3. Decimal a Hexadecimal" << endl;
+    cout << "4. Hexadecimal a Decimal" << endl;
+    cout << "5. Corrimiento Binario (Izquierda o Derecha)" << endl;
+    cout << "6. Salir" << endl;
+    cout << "Seleccione una opción: ";
 }
 
 int main() {
     int opcion;
+
     do {
         mostrar_menu();
-        scanf("%d", &opcion);
+        cin >> opcion;
 
         switch (opcion) {
-            case 1: {
-                char binario[65];
-                printf("Ingrese un número binario: ");
-                scanf("%s", binario);
-                int resultado = binario_a_decimal(binario);
-                printf("El equivalente en decimal es: %d\n", resultado);
+            case 1: { // Binario a Decimal
+                string binario;
+                cout << "Ingrese un número binario: ";
+                cin >> binario;
+                cout << "Decimal: " << binario_a_decimal(binario) << endl;
                 break;
             }
-            case 2: {
-                char binario[65];
-                printf("Ingrese un número binario: ");
-                scanf("%s", binario);
-                char* resultado = binario_a_hexadecimal(binario);
-                printf("El equivalente en hexadecimal es: %s\n", resultado);
-                free(resultado); // Liberar memoria
+            case 2: { // Binario a Hexadecimal
+                string binario;
+                cout << "Ingrese un número binario: ";
+                cin >> binario;
+                cout << "Hexadecimal: " << binario_hexadecimal(binario) << endl;
                 break;
             }
-            case 3: {
+            case 3: { // Decimal a Hexadecimal
                 int decimal;
-                printf("Ingrese un número decimal: ");
-                scanf("%d", &decimal);
-                char* resultado = decimal_a_hexadecimal(decimal);
-                printf("El equivalente en hexadecimal es: %s\n", resultado);
-                free(resultado); // Liberar memoria
+                cout << "Ingrese un número decimal: ";
+                cin >> decimal;
+                cout << "Hexadecimal: " << decimal_a_hexadecimal(decimal) << endl;
                 break;
             }
-            case 4: {
-                char hexadecimal[65];
-                printf("Ingrese un número hexadecimal: ");
-                scanf("%s", hexadecimal);
-                int resultado = hexadecimal_a_decimal(hexadecimal);
-                printf("El equivalente en decimal es: %d\n", resultado);
+            case 4: { // Hexadecimal a Decimal
+                string hexadecimal;
+                cout << "Ingrese un número hexadecimal: ";
+                cin >> hexadecimal;
+                cout << "Decimal: " << hexadecimal_a_decimal(hexadecimal) << endl;
                 break;
             }
-            case 5: {
-                char binario[65];
+            case 5: { // Corrimiento Binario
+                string binario;
+                char direccion;
                 int posiciones;
-                printf("Ingrese un número binario: ");
-                scanf("%s", binario);
-                printf("Ingrese el número de posiciones a desplazar: ");
-                scanf("%d", &posiciones);
-                corrimiento_izquierda(binario, posiciones);
-                printf("Resultado después del corrimiento a la izquierda: %s\n", binario);
+
+                cout << "Ingrese un número binario: ";
+                cin >> binario;
+                cout << "Tipo de corrimiento (I para izquierda, D para derecha): ";
+                cin >> direccion;
+                cout << "Número de posiciones a desplazar: ";
+                cin >> posiciones;
+
+                try {
+                    string resultado = corrimiento_binario(binario, direccion, posiciones);
+                    cout << "Resultado después del corrimiento: " << resultado << endl;
+                } catch (const invalid_argument &e) {
+                    cout << e.what() << endl;
+                }
                 break;
             }
-            case 6: {
-                char binario[65];
-                int posiciones;
-                printf("Ingrese un número binario: ");
-                scanf("%s", binario);
-                printf("Ingrese el número de posiciones a desplazar: ");
-                scanf("%d", &posiciones);
-                corrimiento_derecha(binario, posiciones);
-                printf("Resultado después del corrimiento a la derecha: %s\n", binario);
-                break;
-            }
-            case 7:
-                printf("Saliendo del programa...\n");
+            case 6: // Salir
+                cout << "Saliendo del programa. ¡Hasta luego!" << endl;
                 break;
             default:
-                printf("Opción no válida. Por favor, intente de nuevo.\n");
+                cout << "Opción no válida. Inténtelo de nuevo." << endl;
         }
-    } while (opcion != 7);
+    } while (opcion != 6);
 
     return 0;
 }

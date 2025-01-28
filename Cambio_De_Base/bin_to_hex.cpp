@@ -5,7 +5,7 @@
 using namespace std;
 
 // Función para convertir una cadena binaria a un número decimal
-int binario_a_decimal(const string &binario) {
+int binario_decimal(const string &binario) {
     int decimal = 0;
     int longitud = binario.length();
     for (int i = 0; i < longitud; i++) {
@@ -17,7 +17,7 @@ int binario_a_decimal(const string &binario) {
 }
 
 // Función para convertir un número decimal a una cadena hexadecimal
-string decimal_a_hexadecimal(int decimal) {
+string decimal_hexadecimal(int decimal) {
     string hexadecimal = "";
     string hex_chars = "0123456789ABCDEF";
     while (decimal > 0) {
@@ -29,26 +29,26 @@ string decimal_a_hexadecimal(int decimal) {
 }
 
 // Función principal para convertir binario a hexadecimal
-string binario_a_hexadecimal(const string &binario) { // Paso parámetro por referencia (&) -> Evita copiar el parámetro, minimiza el uso de memoria. (Si no se usa referencia, se copia el parámetro y se almacena en otro espacio de memoria, si se usa referencia, se almacena en el mismo espacio de memoria)
-    int decimal = binario_a_decimal(binario);
-    return decimal_a_hexadecimal(decimal);
+string binario_hexadecimal(const string &binario) { // Paso parámetro por referencia (&) -> Evita copiar el parámetro, minimiza el uso de memoria. (Si no se usa referencia, se copia el parámetro y se almacena en otro espacio de memoria, si se usa referencia, se almacena en el mismo espacio de memoria)
+    int decimal = binario_decimal(binario);
+    return decimal_hexadecimal(decimal);
 }
 
-int main() {
-    string binario;
-    cout << "Ingrese un número binario: ";
-    cin >> binario;
+// int main() {
+//     string binario;
+//     cout << "Ingrese un número binario: ";
+//     cin >> binario;
 
-    // Validar que el binario sea válido
-    for (char c : binario) {
-        if (c != '0' && c != '1') {
-            cout << "Entrada inválida. Solo se permiten dígitos 0 y 1." << endl;
-            return 1;
-        }
-    }
+//     // Validar que el binario sea válido
+//     for (char c : binario) {
+//         if (c != '0' && c != '1') {
+//             cout << "Entrada inválida. Solo se permiten dígitos 0 y 1." << endl;
+//             return 1;
+//         }
+//     }
 
-    string hexadecimal = binario_a_hexadecimal(binario);
-    cout << "El número hexadecimal es: " << hexadecimal << endl;
+//     string hexadecimal = binario_a_hexadecimal(binario);
+//     cout << "El número hexadecimal es: " << hexadecimal << endl;
 
-    return 0;
-}
+//     return 0;
+// }
